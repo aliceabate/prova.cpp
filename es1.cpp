@@ -2,25 +2,24 @@
 using namespace std;
 int main()
 {
-    int matrice[3][3];
-    int somma=0;
-    int max;
+    int matrice[2][2];
     int r;
     int c;
-    max=0;
-    for (r=0; r<3; r++){
-        
-        for (c=0; c<3; c++){
-            
-            cout << "interisci i numeri" <<endl;
-            cin >> matrice [r][c];
-            somma= somma + matrice [r][c];
-            
-            if (matrice [r][c]>max){
-                max=matrice [r][c];}
-                else { matrice [r][c];}
-            }
+    
+    for (r=0;r<2;r++){
+        for (c=0;c<2;c++){
+
+cout << "inserisci il numero" << endl;
+
+matrice[r][c]=rand()%20;
+
+if (matrice[r][c]==3){
+    cout << "il numero 3 è presente e si trova nella riga " << r << " e colonna" << c << endl; }
+
+else { 
+    cout << "il numero non è presente" << endl; 
+}
+
+}
         }
-        
-     cout << "il numero massimo è" << max << " la somma è" << somma << std::endl;
     }
